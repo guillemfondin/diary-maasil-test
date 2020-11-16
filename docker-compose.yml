@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  client:
+    ports:
+      - 3000:3000
+    build:
+      context: ./
+    volumes:
+      - ./:/srv/client
+      - /srv/client/node_modules
+      - /srv/client/.next
+    env_file:
+      - .env

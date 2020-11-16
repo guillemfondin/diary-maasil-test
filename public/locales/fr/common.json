@@ -1,0 +1,13 @@
+{
+  "default": {
+    "title": "Bienvenue sur NextJS avec next-i18next !",
+    "description": {
+      "part1": "Éditez <1>src/pages/index.ts</1> et enregistrez pour recharger",
+      "part2": "Jetez un oeil à <1>public/locales</1> pour gérer les chaines de charactères"
+    },
+    "learn": {
+      "i18n": "Apprendre react-i18n",
+      "react": "Apprendre React"
+    }
+  }
+}

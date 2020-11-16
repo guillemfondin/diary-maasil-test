@@ -1,0 +1,50 @@
+stages:
+  - build
+  - linters
+  - test
+#  - deploy
+
+build:
+  stage: build
+  image: node:14-alpine
+  tags:
+    - docker
+  artifacts:
+    paths:
+      - node_modules/
+      - .next/
+  cache:
+    paths:
+      - ./node_modules
+      - ./.next
+  before_script:
+    - apk add git
+  script:
+    - yarn
+    - yarn build
+
+lint_sass:
+  stage: linters
+  image: node:14-alpine
+  tags:
+    - docker
+  script:
+    - yarn sass-lint
+
+lint_js:
+  stage: linters
+  image: node:14-alpine
+  tags:
+    - docker
+  script:
+    - yarn js-lint
+
+test:
+  stage: test
+  image: node:14-alpine
+  tags:
+    - docker
+  script:
+    - yarn test:ci
+
+# Add a deploy stage, thnik to ignore node_modules

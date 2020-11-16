@@ -1,0 +1,43 @@
+.footer {
+  padding: 100px 100px 50px 100px;
+
+  @media (max-width: 601px) {
+    padding: 10px;
+  }
+
+  background-color: #39383c;
+
+  .logo {
+    width: 200px;
+    height: 50px;
+    background-image: url("../../images/logo-black.png");
+    background-repeat: no-repeat;
+    margin-right: -40px;
+    margin-bottom: 50px;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #7acc4c;
+  }
+
+  h2 {
+    color: #7acc4c;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  .left {
+    color: #fff;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
